@@ -1,0 +1,30 @@
+<?php
+/* copy this configuration file to config/autoload */
+return [
+    
+	/* to use laminas asset view helper (OPTIONAL)
+    'view_helper_config'=>[
+        'asset'=>[
+            'resource_map'=>json_decode(file_get_contents(__DIR__ . '/../../public/build/manifest.json'),true)
+        ]
+    ],
+    */
+	
+    'webpack_encore_view_helper_config'=>[
+
+		/* webpack encore entry points */
+        'entrypoints_map' => json_decode(file_get_contents(__DIR__ . '/../../public/build/entrypoints.json'),true),
+
+		/* map view to entrypoint ( array can be empty if templates name match entrypoint name when using auto* parameters */
+        'template_entrypoint_map'=>[
+			/**
+			'templatename'=>'entrypoint name',
+			*/
+            
+			// ex 'layout::default'=>'app',
+        ]
+    ]
+
+];
+
+

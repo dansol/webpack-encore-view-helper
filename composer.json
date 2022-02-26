@@ -1,0 +1,23 @@
+{
+    "name": "dansol/webpack-encore-view-helper",
+    "description": "Symfony webpack encore laminas view helper",
+    
+    "license": "MIT",
+	"keywords":          [
+        "laminas view helper",
+        "webback",
+        "encore"
+    ],
+	"authors": [
+        {
+            "name":     "Daniele Soligo"
+        }
+    ],
+	
+	"autoload": {
+        "psr-4": {
+            "WebpackEncoreViewHelper\\": "src"
+        }
+    }
+	
+}
