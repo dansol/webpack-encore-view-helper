@@ -5,7 +5,8 @@
     "license": "MIT",
 	"keywords":          [
         "laminas view helper",
-        "webback",
+		"laminas",
+        "webpack",
         "encore"
     ],
 	"authors": [
