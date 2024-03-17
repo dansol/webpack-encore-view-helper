@@ -1,6 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace WebpackEncoreViewHelper;
+
+use WebpackEncoreViewHelper\WebpackEncoreViewHelper;
+use WebpackEncoreViewHelper\WebpackEncoreViewHelperFactory;
 
 /**
  * The configuration provider for the ZecLibrary module
@@ -33,16 +38,15 @@ class ConfigProvider
     {
         return [
             //zend-servicemanager-style configuration for adding view helpers:
-            'aliases'=>[
-                'webpackEncoreAssets'=>\WebpackEncoreViewHelper\WebpackEncoreViewHelper::class,
-                'webpack_encore_assets'=>\WebpackEncoreViewHelper\WebpackEncoreViewHelper::class
+            'aliases' => [
+                'webpackEncoreAssets'   => WebpackEncoreViewHelper::class,
+                'webpack_encore_assets' => WebpackEncoreViewHelper::class,
             ],
             //- 'invokables'
             //- 'factories'
             'factories' => [
-                    \WebpackEncoreViewHelper\WebpackEncoreViewHelper::class=>\WebpackEncoreViewHelper\WebpackEncoreViewHelperFactory::class
-            ]
+                WebpackEncoreViewHelper::class => WebpackEncoreViewHelperFactory::class,
+            ],
         ];
     }
-
 }
